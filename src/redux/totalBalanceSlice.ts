@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState: initialState = {
-  weeklyTotal: null,
+const initialState: TotalBalanceState = {
+  totalBalance: 0,
 };
 
 export const totalBalanceSlice = createSlice({
@@ -9,7 +9,7 @@ export const totalBalanceSlice = createSlice({
   initialState,
   reducers: {
     changeTotalBalance: (state, action) => {
-      state.weeklyTotal = action.payload;
+      state.totalBalance = action.payload;
     },
   },
 });
@@ -19,6 +19,6 @@ export default totalBalanceSlice.reducer;
 
 // Interfaces
 
-interface initialState {
-  weeklyTotal: number | null;
+export interface TotalBalanceState {
+  totalBalance: number;
 }

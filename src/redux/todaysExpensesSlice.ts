@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState: InitialState = {
-  todaysExpenses: null,
+const initialState: TodaysExpensesState = {
+  todaysExpenses: 0,
 };
 
 export const todaysExpensesSlice = createSlice({
@@ -19,6 +19,6 @@ export default todaysExpensesSlice.reducer;
 
 // Interfaces
 
-interface InitialState {
-  todaysExpenses: number | null;
+export interface TodaysExpensesState {
+  todaysExpenses: number;
 }

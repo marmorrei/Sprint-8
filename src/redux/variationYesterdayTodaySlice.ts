@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState: InitialState = {
-  variationYesterdayToday: null,
+const initialState: VariationYesterdayTodayState = {
+  variationYesterdayToday: 0,
 };
 
 export const variationYesterdayTodaySlice = createSlice({
@@ -19,6 +19,6 @@ export default variationYesterdayTodaySlice.reducer;
 
 // Interfaces
 
-interface InitialState {
-  variationYesterdayToday: number | null;
+export interface VariationYesterdayTodayState {
+  variationYesterdayToday: number;
 }
