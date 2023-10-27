@@ -1,5 +1,12 @@
 import './App.css';
+import TotalBalance from './components/TotalBalance/TotalBalance';
+import ExpensesSummary from './components/ExpensesSummary/ExpensesSummary';
 
 export default function App(): JSX.Element {
-  return <h1>App</h1>;
+  return (
+    <div className='app'>
+      <TotalBalance />
+      <ExpensesSummary />
+    </div>
+  );
 }
