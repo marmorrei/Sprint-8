@@ -1,3 +1,13 @@
+import { TodaysExpensesStyled } from './Styled-components';
 export default function TodaysExpenses() {
-  return <h1>Today's expenses</h1>;
+  return (
+    <TodaysExpensesStyled className='todays-expenses'>
+      <span>
+        <small>Today's expenses</small>
+      </span>
+      <p>
+        <strong>569 €</strong>
+      </p>
+    </TodaysExpensesStyled>
+  );
 }

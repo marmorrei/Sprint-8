@@ -26,7 +26,7 @@ export default function TotalBalance(): JSX.Element {
   }, [lastWeekExpenses]);
 
   return (
-    <TotalBalanceStyled>
+    <TotalBalanceStyled className='total-balance'>
       <div className='balance'>
         <span>
           <small>Total balance</small>
