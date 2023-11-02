@@ -1,0 +1,30 @@
+{
+  "main": {
+    "app-footer": "Algunos de los iconos utilizados en esta web son de",
+    "total-balance": "Balance total",
+    "year": "Año",
+    "week": "Semana",
+    "expenses-title": "Gastos - Última semana",
+    "graph-labels": {
+      "mon": "lu",
+      "tue": "ma",
+      "wed": "mi",
+      "thu": "ju",
+      "fri": "vi",
+      "sat": "sa",
+      "sun": "do"
+    },
+    "todays-expenses": "Gastos hoy",
+    "week-days": {
+      "monday": "lunes",
+      "tuesday": "martes",
+      "wednesday": "miércoles",
+      "thursday": "jueves",
+      "friday": "viernes",
+      "saturday": "sábado",
+      "sunday": "domingo"
+    },
+    "consult": "Consulta la semana anterior",
+    "comparison": "respecto a ayer"
+  }
+}
