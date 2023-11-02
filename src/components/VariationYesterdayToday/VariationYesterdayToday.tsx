@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { VariationYesterdayTodayStyled } from './Styled-components';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,6 +20,9 @@ export default function VariationYesterdayToday() {
     (state: Store) => state.variationYesterdayToday,
   );
   const dispatch = useDispatch();
+
+  // Translation
+  const { t } = useTranslation();
 
   // useEffect
   useEffect(() => {
@@ -59,14 +63,14 @@ export default function VariationYesterdayToday() {
       <p>
         <strong>
           {dayNumber === 0
-            ? 'Consult previous week'
+            ? t('main.consult')
             : variationYesterdayToday > 0
             ? '+' + variationYesterdayToday + '%'
             : variationYesterdayToday + '%'}
         </strong>
       </p>
       <span>
-        <small>compared to yesterday</small>
+        <small>{t('main.comparison')}</small>
       </span>
     </VariationYesterdayTodayStyled>
   );

@@ -1,0 +1,28 @@
+{
+  "main": {
+    "app-footer": "Algunes de les icones utilitzades en aquesta web són de",
+    "total-balance": "Balanç total",
+    "expenses-title": "Despeses - Última setmana",
+    "graph-labels": {
+      "mon": "dl",
+      "tue": "dt",
+      "wed": "dc",
+      "thu": "dj",
+      "fri": "dv",
+      "sat": "ds",
+      "sun": "dg"
+    },
+    "todays-expenses": "Despeses avui",
+    "week-days": {
+      "monday": "dilluns",
+      "tuesday": "dimarts",
+      "wednesday": "dimecres",
+      "thursday": "dijous",
+      "friday": "divendres",
+      "saturday": "dissabte",
+      "sunday": "diumenge"
+    },
+    "consult": "Consulta la setmana anterior",
+    "comparison": "respecte a ahir"
+  }
+}

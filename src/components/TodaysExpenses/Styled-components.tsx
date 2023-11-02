@@ -21,9 +21,11 @@ export const TodaysExpensesStyled = styled.div`
     margin-top: 0.2rem;
 
     p {
+      width: 6rem;
       margin: 0.2rem 0;
       font-size: 0.8rem;
       color: #c3c4c1;
+      text-align: center;
     }
 
     button {

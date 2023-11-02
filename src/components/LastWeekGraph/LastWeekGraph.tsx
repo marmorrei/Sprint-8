@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -25,10 +26,15 @@ ChartJS.register(
 );
 
 export default function LastWeekGraph(): JSX.Element {
+  // States
   const lastWeekExpenses = useSelector(
     (state: Store) => state.lastWeekExpenses,
   );
 
+  // Translation
+  const { t } = useTranslation();
+
+  // Graph
   const options = {
     responsive: true,
     plugins: {
@@ -41,7 +47,10 @@ export default function LastWeekGraph(): JSX.Element {
     },
   };
 
-  const labels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const labels = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+  const translatedLabels = labels.map(label => t(`main.graph-labels.${label}`));
+
   const expenses = [
     lastWeekExpenses.monday,
     lastWeekExpenses.tuesday,
@@ -53,7 +62,7 @@ export default function LastWeekGraph(): JSX.Element {
   ];
 
   const data = {
-    labels,
+    labels: translatedLabels,
     datasets: [
       {
         data: expenses,

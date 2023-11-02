@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { TotalBalanceStyled } from './Styled-components';
 import { Store } from '../../redux/store';
@@ -5,6 +6,7 @@ import { useEffect } from 'react';
 import { changeTotalBalance } from '../../redux/totalBalanceSlice';
 
 export default function TotalBalance(): JSX.Element {
+  // States
   const dispatch = useDispatch();
   const lastWeekExpenses = useSelector(
     (state: Store) => state.lastWeekExpenses,
@@ -12,6 +14,10 @@ export default function TotalBalance(): JSX.Element {
   const { totalBalance } = useSelector((state: Store) => state.totalBalance);
   const { currency } = useSelector((state: Store) => state.currency);
 
+  // Translation
+  const { t } = useTranslation();
+
+  // useEffect
   useEffect(() => {
     const total: number =
       lastWeekExpenses.monday +
@@ -29,7 +35,7 @@ export default function TotalBalance(): JSX.Element {
     <TotalBalanceStyled className='total-balance'>
       <div className='balance'>
         <span>
-          <small>Total balance</small>
+          <small>{t('main.total-balance')}</small>
         </span>
         <p>
           <strong>

@@ -1,0 +1,28 @@
+{
+  "main": {
+    "app-footer": "Some of the icons used in this website are from",
+    "total-balance": "Total balance",
+    "expenses-title": "Expenses - Last Week",
+    "graph-labels": {
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat",
+      "sun": "Sun"
+    },
+    "todays-expenses": "Today's expenses",
+    "week-days": {
+      "monday": "monday",
+      "tuesday": "tuesday",
+      "wednesday": "wednesday",
+      "thursday": "thursday",
+      "friday": "friday",
+      "saturday": "saturday",
+      "sunday": "sunday"
+    },
+    "consult": "Consult previous week",
+    "comparison": "compared to yesterday"
+  }
+}

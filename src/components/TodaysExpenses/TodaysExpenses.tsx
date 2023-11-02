@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { TodaysExpensesStyled } from './Styled-components';
@@ -18,6 +19,9 @@ export default function TodaysExpenses() {
     (state: Store) => state.todaysExpenses,
   );
   const { currency } = useSelector((state: Store) => state.currency);
+
+  // Translation
+  const { t } = useTranslation();
 
   // useEffect
   useEffect(() => {
@@ -60,10 +64,12 @@ export default function TodaysExpenses() {
         dispatch(changeDayNumber(dayNumber + 1)));
   };
 
+  const translatedToday = t(`main.week-days.${today}`);
+
   return (
     <TodaysExpensesStyled className='todays-expenses'>
       <span>
-        <small>Today's expenses</small>
+        <small>{t('main.todays-expenses')}</small>
       </span>
       <p>
         <strong>
@@ -77,7 +83,7 @@ export default function TodaysExpenses() {
             alt='left-arrow'
           />
         </button>
-        <p>{today.toUpperCase()}</p>
+        <p>{translatedToday.toUpperCase()}</p>
         <button onClick={() => handleClick('next')}>
           <img
             src='/src/assets/images/arrow-sm-right-svgrepo-com.svg'
