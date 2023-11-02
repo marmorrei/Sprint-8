@@ -2,6 +2,8 @@
   "main": {
     "app-footer": "Algunes de les icones utilitzades en aquesta web són de",
     "total-balance": "Balanç total",
+    "year": "Any",
+    "week": "Setmana",
     "expenses-title": "Despeses - Última setmana",
     "graph-labels": {
       "mon": "dl",

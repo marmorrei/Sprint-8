@@ -19,12 +19,28 @@ export const TotalBalanceStyled = styled.section`
     }
   }
 
+  .week-year {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .navigation-arrows {
     display: flex;
     flex-direction: row;
 
+    button {
+      border: none;
+      background-color: transparent;
+    }
+
     img {
       width: 2rem;
+    }
+
+    img:hover {
+      width: 2.5rem;
     }
   }
 `;

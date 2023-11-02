@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState: WeekNumberState = {
-  weekNumber: 0,
+  weekNumber: 1,
+  totalOfWeeks: 0,
 };
 
 export const weekNumberSlice = createSlice({
@@ -11,14 +12,18 @@ export const weekNumberSlice = createSlice({
     changeWeekNumber: (state, action) => {
       state.weekNumber = action.payload;
     },
+    changeTotalOfWeeks: (state, action) => {
+      state.totalOfWeeks = action.payload;
+    },
   },
 });
 
-export const { changeWeekNumber } = weekNumberSlice.actions;
+export const { changeWeekNumber, changeTotalOfWeeks } = weekNumberSlice.actions;
 export default weekNumberSlice.reducer;
 
 // Interfaces
 
 export interface WeekNumberState {
   weekNumber: number;
+  totalOfWeeks: number;
 }

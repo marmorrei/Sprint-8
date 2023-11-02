@@ -5,15 +5,17 @@ import LanguageOptions from './components/LaguageOptions/LanguageOptions';
 import TotalBalance from './components/TotalBalance/TotalBalance';
 import ExpensesSummary from './components/ExpensesSummary/ExpensesSummary';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { changeWeekNumber } from './redux/weekNumberSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeTotalOfWeeks } from './redux/weekNumberSlice';
 import { addLastWeekExpenses } from './redux/lastWeekExpensesSlice';
 import { changeCurrency } from './redux/currencySlice';
 import { changeTodaysExpenses } from './redux/todaysExpensesSlice';
+import { Store } from './redux/store';
 
 function App(): JSX.Element {
   // States
   const dispatch = useDispatch();
+  const { weekNumber } = useSelector((state: Store) => state.weekNumber);
 
   // Translation
   const { t } = useTranslation();
@@ -24,16 +26,16 @@ function App(): JSX.Element {
       .then(res => res.json())
       .then(data => {
         const expenses = data.expenses;
-        const latestWeek = expenses.find(
-          (item: { week: number }) => item.week === expenses.length,
+        const chosenWeek = expenses.find(
+          (item: { week: number }) => item.week === weekNumber,
         );
         // Default states after fetch
-        dispatch(changeCurrency(latestWeek.currency));
-        dispatch(changeWeekNumber(expenses.length));
-        dispatch(addLastWeekExpenses(latestWeek.dayly_expenses));
-        dispatch(changeTodaysExpenses(latestWeek.dayly_expenses.monday));
+        dispatch(changeCurrency(chosenWeek.currency));
+        dispatch(changeTotalOfWeeks(expenses.length));
+        dispatch(addLastWeekExpenses(chosenWeek.dayly_expenses));
+        dispatch(changeTodaysExpenses(chosenWeek.dayly_expenses.monday));
       });
-  }, []);
+  }, [weekNumber]);
 
   return (
     <div className='app'>

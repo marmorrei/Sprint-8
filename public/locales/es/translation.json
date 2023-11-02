@@ -2,6 +2,8 @@
   "main": {
     "app-footer": "Algunos de los iconos utilizados en esta web son de",
     "total-balance": "Balance total",
+    "year": "Año",
+    "week": "Semana",
     "expenses-title": "Gastos - Última semana",
     "graph-labels": {
       "mon": "lu",

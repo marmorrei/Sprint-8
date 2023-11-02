@@ -2,6 +2,8 @@
   "main": {
     "app-footer": "Some of the icons used in this website are from",
     "total-balance": "Total balance",
+    "year": "Year",
+    "week": "Week",
     "expenses-title": "Expenses - Last Week",
     "graph-labels": {
       "mon": "Mon",
