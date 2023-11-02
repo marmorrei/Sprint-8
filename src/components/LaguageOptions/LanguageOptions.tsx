@@ -6,13 +6,13 @@ export default function LanguageOptions() {
   return (
     <LanguageOptionsStyled className='language-options'>
       <button type='submit' onClick={() => i18n.changeLanguage('en')}>
-        <img src='/src/assets/images/united-kingdom.png' alt='ENG' />
+        <img src='/public/assets/images/united-kingdom.png' alt='ENG' />
       </button>
       <button type='submit' onClick={() => i18n.changeLanguage('es')}>
-        <img src='/src/assets/images/spain.png' alt='SPA' />
+        <img src='/public/assets/images/spain.png' alt='SPA' />
       </button>
       <button type='submit' onClick={() => i18n.changeLanguage('ca')}>
-        <img src='/src/assets/images/catalonia.png' alt='CAT' />
+        <img src='/public/assets/images/catalonia.png' alt='CAT' />
       </button>
     </LanguageOptionsStyled>
   );
