@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { changeWeekNumber } from './redux/weekNumberSlice';
 import { addLastWeekExpenses } from './redux/lastWeekExpensesSlice';
 import { changeCurrency } from './redux/currencySlice';
+import { changeTodaysExpenses } from './redux/todaysExpensesSlice';
 
 export default function App(): JSX.Element {
   const dispatch = useDispatch();
@@ -18,9 +19,11 @@ export default function App(): JSX.Element {
         const latestWeek = expenses.find(
           (item: { week: number }) => item.week === expenses.length,
         );
+        // Default states after fetch
         dispatch(changeCurrency(latestWeek.currency));
         dispatch(changeWeekNumber(expenses.length));
         dispatch(addLastWeekExpenses(latestWeek.dayly_expenses));
+        dispatch(changeTodaysExpenses(latestWeek.dayly_expenses.monday));
       });
   }, []);
 

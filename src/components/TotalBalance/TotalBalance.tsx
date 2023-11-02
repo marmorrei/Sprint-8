@@ -9,8 +9,8 @@ export default function TotalBalance(): JSX.Element {
   const lastWeekExpenses = useSelector(
     (state: Store) => state.lastWeekExpenses,
   );
-  const totalBalance = useSelector((state: Store) => state.totalBalance);
-  const currency = useSelector((state: Store) => state.currency);
+  const { totalBalance } = useSelector((state: Store) => state.totalBalance);
+  const { currency } = useSelector((state: Store) => state.currency);
 
   useEffect(() => {
     const total: number =
@@ -33,7 +33,7 @@ export default function TotalBalance(): JSX.Element {
         </span>
         <p>
           <strong>
-            {totalBalance.totalBalance} {currency.currency}
+            {totalBalance} {currency}
           </strong>
         </p>
       </div>
