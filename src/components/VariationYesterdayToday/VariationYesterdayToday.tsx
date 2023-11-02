@@ -62,11 +62,9 @@ export default function VariationYesterdayToday() {
     <VariationYesterdayTodayStyled className='variation-yesterday-today'>
       <p>
         <strong>
-          {dayNumber === 0
-            ? t('main.consult')
-            : variationYesterdayToday > 0
-            ? '+' + variationYesterdayToday + '%'
-            : variationYesterdayToday + '%'}
+          {(dayNumber === 0 && t('main.consult')) ||
+            (variationYesterdayToday > 0 && `+${variationYesterdayToday}%`) ||
+            (variationYesterdayToday < 0 && `${variationYesterdayToday}%`)}
         </strong>
       </p>
       <span>

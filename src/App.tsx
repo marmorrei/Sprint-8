@@ -1,10 +1,9 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './App.css';
 import LanguageOptions from './components/LaguageOptions/LanguageOptions';
 import TotalBalance from './components/TotalBalance/TotalBalance';
 import ExpensesSummary from './components/ExpensesSummary/ExpensesSummary';
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeTotalOfWeeks } from './redux/weekNumberSlice';
 import { addLastWeekExpenses } from './redux/lastWeekExpensesSlice';
