@@ -79,14 +79,14 @@ export default function TodaysExpenses() {
       <div className='current-day-navigation'>
         <button onClick={() => handleClick('previous')}>
           <img
-            src='/public/assets/images/arrow-sm-left-svgrepo-com.svg'
+            src='/assets/images/arrow-sm-left-svgrepo-com.svg'
             alt='left-arrow'
           />
         </button>
         <p>{translatedToday.toUpperCase()}</p>
         <button onClick={() => handleClick('next')}>
           <img
-            src='/public/assets/images/arrow-sm-right-svgrepo-com.svg'
+            src='/assets/images/arrow-sm-right-svgrepo-com.svg'
             alt='right-arrow'
           />
         </button>
