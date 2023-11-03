@@ -70,13 +70,13 @@ export default function TotalBalance(): JSX.Element {
       <div className='navigation-arrows'>
         <button onClick={() => handleClick('previous')}>
           <img
-            src='/public/assets/images/arrow-sm-left-svgrepo-com.svg'
+            src='/assets/images/arrow-sm-left-svgrepo-com.svg'
             alt='left-arrow'
           />
         </button>
         <button onClick={() => handleClick('next')}>
           <img
-            src='/public/assets/images/arrow-sm-right-svgrepo-com.svg'
+            src='/assets/images/arrow-sm-right-svgrepo-com.svg'
             alt='right-arrow'
           />
         </button>
