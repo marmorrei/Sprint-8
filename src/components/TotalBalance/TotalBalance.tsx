@@ -5,6 +5,7 @@ import { Store } from '../../redux/store';
 import { useEffect } from 'react';
 import { changeTotalBalance } from '../../redux/totalBalanceSlice';
 import { changeWeekNumber } from '../../redux/weekNumberSlice';
+import { changeDayNumber } from '../../redux/todaysExpensesSlice';
 
 export default function TotalBalance(): JSX.Element {
   // States
@@ -43,6 +44,7 @@ export default function TotalBalance(): JSX.Element {
       (weekNumber < totalOfWeeks &&
         navigation === 'next' &&
         dispatch(changeWeekNumber(weekNumber + 1)));
+    dispatch(changeDayNumber(0));
   };
 
   return (
